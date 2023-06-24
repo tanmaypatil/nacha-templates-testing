@@ -12,3 +12,8 @@ we will use static files for nacha templates . templates would be parameterized 
 ## Set up /Changes 
 All freemarker templates needs to be put in resources directory 
 Change the ResourcePath.basePath variable to point to the location of your templates.
+
+## Before
+![image](https://github.com/tanmaypatil/nacha-templates-testing/assets/5380383/b48b3015-1066-4fe2-bf71-fa56c0ce7605)
+
+
