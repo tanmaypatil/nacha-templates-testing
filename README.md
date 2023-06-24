@@ -16,5 +16,8 @@ Change the ResourcePath.basePath variable to point to the location of your templ
 ## freemarker template for Nacha CT
 ![image](https://github.com/tanmaypatil/nacha-templates-testing/assets/5380383/322ab5b7-0180-4a84-96a5-17b1afa9c1ec)
 
+## Nacha file generated 
+You can observe that effDate variable is replaced in generated file.
+![image](https://github.com/tanmaypatil/nacha-templates-testing/assets/5380383/79d9ad58-3824-4ae0-baa2-e32e0d36b659)
 
 
