@@ -58,4 +58,17 @@ public class FreeMarker {
         }
         return true;
     }
+
+ public boolean processTemplateAndWriteFile(String templateFile, HashMap params, String out_file) {
+        try {
+            Template temp = cfg.getTemplate(templateFile);
+            /* Merge data-model with template */
+            Writer out = new BufferedWriter(new FileWriter(ResourcePath.basePath + "\\" + out_file));
+            temp.process(params, out);
+        } catch (Exception e) {
+            System.out.println("Exception in processTemplateAndWrite is : e" + e);
+            return false;
+        }
+        return true;
+    }
 }
