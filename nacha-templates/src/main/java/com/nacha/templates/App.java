@@ -29,6 +29,8 @@ public final class App {
         latest.setName("green mouse");
         root.put("latestProduct", latest);
         boolean result = freeMarker.processTemplateAndWrite("test.ftlh", root);
+        // write to a file 
+        result = freeMarker.processTemplateAndWriteFile("test.ftlh", root);
 
     }
 }

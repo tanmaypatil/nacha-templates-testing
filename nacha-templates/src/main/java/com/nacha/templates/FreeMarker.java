@@ -1,6 +1,9 @@
 package com.nacha.templates;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.HashMap;
@@ -37,11 +40,22 @@ public class FreeMarker {
             Writer out = new OutputStreamWriter(System.out);
             temp.process(params, out);
         } catch (Exception e) {
-            System.out.println("Exception is e" + e);
-
+            System.out.println("Exception in processTemplateAndWrite is : e" + e);
+            return false;
         }
-
         return true;
+    }
 
+     public boolean processTemplateAndWriteFile(String templateFile, HashMap params) {
+        try {
+            Template temp = cfg.getTemplate(templateFile);
+            /* Merge data-model with template */
+            Writer out = new BufferedWriter(new FileWriter(ResourcePath.basePath + "\\" + "response.out"));
+            temp.process(params, out);
+        } catch (Exception e) {
+            System.out.println("Exception in processTemplateAndWrite is : e" + e);
+            return false;
+        }
+        return true;
     }
 }
