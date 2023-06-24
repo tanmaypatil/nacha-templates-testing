@@ -32,8 +32,22 @@ class AppTest {
         latest.setName("green mouse");
         root.put("latestProduct", latest);
         // write to a file 
-        boolean result = freeMarker.processTemplateAndWriteFile("test.ftlh", root);
+        boolean result = freeMarker.processTemplateAndWriteFile("test.ftlh", root,"response2.out");
         Assertions.assertTrue(result);
+    }
 
+    @DisplayName("NACHA ppd file generation , replace effective date ")
+    @Test
+    void generateNachaFile() {
+        FreeMarker freeMarker = new FreeMarker();
+        freeMarker.initialiseFreeMarker();
+        HashMap<String,Object> root = new HashMap<String,Object>();
+        root.put("user", "Big Joe");
+        NachaConfig nacha = new NachaConfig();
+        nacha.setEffDate("210212");
+        root.put("nachaConfig", nacha);
+        // write to a file 
+        boolean result = freeMarker.processTemplateAndWriteFile("nacha_customer_CT_PPD.ftl", root,"nacha_ct_ppd.ach");
+        Assertions.assertTrue(result);
     }
 }
