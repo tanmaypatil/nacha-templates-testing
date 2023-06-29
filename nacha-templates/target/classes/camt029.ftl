@@ -16,11 +16,11 @@
     <S2SCTIcf:NumSRBlk>0</S2SCTIcf:NumSRBlk>
     <S2SCTIcf:RsltnOfInvstgtn xmlns="urn:iso:std:iso:20022:tech:xsd:camt.029.001.09">
         <Assgnmt>
-            <Id>${sepaConfig.bic}</Id>
+            <Id>236F64737E452E4X</Id>
             <Assgnr>
                 <Agt>
                     <FinInstnId>
-                        <BICFI>DHEUDHEU</BICFI>
+                        <BICFI>${sepaConfig.bic} </BICFI>
                     </FinInstnId>
                 </Agt>
             </Assgnr>
