@@ -50,4 +50,20 @@ class AppTest {
         boolean result = freeMarker.processTemplateAndWriteFile("nacha_customer_CT_PPD.ftl", root,"nacha_ct_ppd.ach");
         Assertions.assertTrue(result);
     }
+
+       @DisplayName("xml file generation")
+    @Test
+    void generateSepaFile() {
+        FreeMarker freeMarker = new FreeMarker();
+        freeMarker.initialiseFreeMarker();
+        HashMap<String,Object> root = new HashMap<String,Object>();
+        root.put("user", "Big Joe");
+        SepaConfig sepa = new SepaConfig();
+        sepa.setBic("DHEUDHEU");
+        root.put("sepaConfig", sepa);
+        // write to a file 
+        boolean result = freeMarker.processTemplateAndWriteFile("camt029.ftl", root,"camt029.xml");
+        Assertions.assertTrue(result);
+    }
 }
+
