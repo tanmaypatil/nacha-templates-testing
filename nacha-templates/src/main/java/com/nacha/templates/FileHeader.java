@@ -24,17 +24,19 @@ public class FileHeader {
     
 
     private void init() {
-        int hh = Utils.getRandomNumberInRange(0, 60);
+        int hh = Utils.getRandomNumberInRange(0, 24);
         int mm = Utils.getRandomNumberInRange(0, 60);
         this.fileCreTime = String.format(String.valueOf(hh), "%02d") + String.format(String.valueOf(mm), "%02d");
+        System.out.println(" creTime "+fileCreTime);
     }
 
     public FileHeader(String immDest, String immOrig,
-            String fileCreDate) {
+            String fileCreDate ) {
         init();
         this.immDest = immDest;
         this.immOrig = immOrig;
         this.fileCreDate = fileCreDate;
+    
 
     }
 

@@ -1,4 +1,4 @@
-101 1210572627867867867${nachaConfig.fh.fileCreDate}1241D094101ROZA BANK USA          WALL MART                WF    
+101${nachaConfig.fh.immDest}${nachaConfig.fh.immOrig}${nachaConfig.fh.fileCreDate}${nachaConfig.fh.fileCreTime}D094101ROZA BANK USA          WALL MART                WF    
 5220WALL MART       BLUEBIRD            7867867867CCDTransfer        2307031841121057266559210
 6223110796941300001006       1656900035102895545215300BILALM JONESNYLA      AB1121057261656900
 705                   Extra Info related to Transaction                            00011656900

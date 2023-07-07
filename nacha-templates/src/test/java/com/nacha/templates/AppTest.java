@@ -79,7 +79,7 @@ class AppTest {
     @Test
     void generateNachaFileWithHeaderInput() {
         HashMap<String, Object> root = new HashMap<String, Object>();
-        String immDest = "1210572627" ;//04-13 
+        String immDest = " 121057262" ;//04-13 
         String immOrigin = "2786786786"; //14-23
         String fileCreDate = "230704" ;//24-29 
         NachaConfig nc = new NachaConfig(immDest, immOrigin, fileCreDate);
